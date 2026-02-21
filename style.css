@@ -1,4 +1,10 @@
 /* ===== 全体設定 ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   padding-bottom: 160px;
   font-family: 'Segoe UI', sans-serif;
@@ -7,10 +13,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 .logo {
   max-width: 300px;
+  width: 100%;
 }
 
 /* ===== 下部固定パネル ===== */
@@ -21,6 +30,7 @@ body {
   transform: translateX(-50%);
   width: 95%;
   max-width: 600px;
+  margin: 0 auto;
   border-top: 3px solid #000;
   background: #fff;
   padding: 14px 20px;
@@ -39,7 +49,8 @@ body {
   border-radius: 12px;
   padding: 6px 10px;
   font-size: 14px;
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
@@ -59,6 +70,7 @@ button {
   font-size: 14px;
   cursor: pointer;
   transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+  max-width: 100%;
 }
 
 button:hover {
@@ -85,6 +97,7 @@ button:active {
   margin-bottom: 16px;
   width: 95%;
   max-width: 600px;
+  margin: 0 auto;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -112,6 +125,7 @@ button:active {
   border-radius: 8px;
   transition: background 0.2s, transform 0.1s;
 }
+
 #channelList li span {
   user-select: none;
 }
@@ -124,6 +138,8 @@ button:active {
 /* サムネイル */
 #channelList img {
   border-radius: 8px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== 再生順リスト ===== */
@@ -133,6 +149,7 @@ button:active {
   margin: 0;
   max-width: 600px;
   width: 95%;
+  margin: 0 auto;
 }
 
 #playOrderList li {

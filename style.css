@@ -8,8 +8,8 @@
 body {
   padding-bottom: 160px;
   font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  color: #000000;
+  background: #121212;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,8 +31,8 @@ body {
   width: 95%;
   max-width: 600px;
   margin: 0 auto;
-  border-top: 3px solid #000;
-  background: #fff;
+  border-top: 3px solid #fff;
+  background: #1c1c1c;
   padding: 14px 20px;
   display: flex;
   gap: 14px;
@@ -40,30 +40,32 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 12px 12px 0 0;
-  box-shadow: 0 -3px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 -3px 12px rgba(255,255,255,0.2);
 }
 
 /* ===== 入力 + 追加ボタン ===== */
 #channelInput {
-  border: 2px solid #000;
+  border: 2px solid #fff;
   border-radius: 12px;
   padding: 6px 10px;
   font-size: 14px;
   width: 100%;
   max-width: 220px;
+  background: #222;
+  color: #fff;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 #channelInput:focus {
-  border-color: #000;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255,255,255,0.5);
   outline: none;
 }
 
 /* ボタン */
 button {
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: none;
   border-radius: 24px;
   padding: 8px 18px;
@@ -74,14 +76,14 @@ button {
 }
 
 button:hover {
-  background: #222;
+  background: #ccc;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
 }
 
 button:active {
   transform: scale(0.97);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(255,255,255,0.3);
 }
 
 /* URL入力と追加ボタンの距離 */
@@ -91,15 +93,15 @@ button:active {
 
 /* ===== チャンネルリスト ===== */
 #channelList > div {
-  border: 2px solid #000;
+  border: 2px solid #fff;
   border-radius: 12px;
   padding: 12px;
   margin-bottom: 16px;
   width: 95%;
   max-width: 600px;
   margin: 0 auto;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #111;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
 }
 
 /* ヘッダー折りたたみ */
@@ -107,7 +109,7 @@ button:active {
   margin: 0;
   font-size: 18px;
   cursor: pointer;
-  color: #000;
+  color: #fff;
 }
 
 /* ===== 動画リスト ===== */
@@ -124,6 +126,7 @@ button:active {
   padding: 6px 8px;
   border-radius: 8px;
   transition: background 0.2s, transform 0.1s;
+  background: #222;
 }
 
 #channelList li span {
@@ -131,7 +134,7 @@ button:active {
 }
 
 #channelList li:hover {
-  background: #f0f0f0;
+  background: #333;
   transform: scale(1.02);
 }
 
@@ -153,13 +156,14 @@ button:active {
 }
 
 #playOrderList li {
-  border: 2px solid #000;
+  border: 2px solid #1c1c1c;
   border-radius: 12px;
   padding: 10px;
   margin-bottom: 6px;
-  background: #fff;
+  background: #1c1c1c;
   cursor: grab;
   transition: background 0.2s, transform 0.1s;
+  color: #fff;
 }
 
 #playOrderList li.dragging {
@@ -168,7 +172,7 @@ button:active {
 }
 
 #playOrderList li:hover {
-  background: #f0f0f0;
+  background: #333;
 }
 
 /* ===== 中央寄せ ===== */
@@ -183,13 +187,13 @@ button:active {
 
 #selectView hr {
   width: 90%;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   margin: 12px 0;
 }
 
 /* ===== ホバー感（クリック感強化） ===== */
 input[type="checkbox"]:hover + span {
-  color: #222;
+  color: #fff;
   font-weight: bold;
   transition: color 0.2s, font-weight 0.2s;
 }

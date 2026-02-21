@@ -315,11 +315,36 @@ backBtn.addEventListener("click", () => {
 /* ===== ドラッグ ===== */
 let dragged = null;
 function enableDrag(li) {
+  // 既存のマウス用
   li.addEventListener("dragstart", () => dragged = li);
   li.addEventListener("dragover", e => {
     e.preventDefault();
     if (!dragged || dragged === li) return;
     playOrderList.insertBefore(dragged, li);
+  });
+
+  // タッチ用
+  li.addEventListener("touchstart", (e) => {
+    dragged = li;
+    li.classList.add("dragging");
+    e.target.style.opacity = "0.5";
+  });
+
+  li.addEventListener("touchmove", (e) => {
+    e.preventDefault();  // スクロール防止
+    const touch = e.touches[0];
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+
+    if (!target) return;
+    const closestLi = target.closest("#playOrderList li");
+    if (closestLi && closestLi !== dragged) {
+      playOrderList.insertBefore(dragged, closestLi);
+    }
+  });
+
+  li.addEventListener("touchend", () => {
+    li.classList.remove("dragging");
+    dragged = null;
   });
 }
 

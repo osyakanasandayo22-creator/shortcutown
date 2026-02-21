@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Shortcut</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="./images/logo.png" alt="logo" class="logo">
+
+<!-- ===== 選択画面 ===== -->
+<section id="selectView">
+  <input
+    type="text"
+    id="channelInput"
+    placeholder="YouTubeチャンネルURL / @username / チャンネルID"
+  >
+  <button id="addChannelBtn">読み込む</button>
+
+  <hr>
+
+  <section id="channelList"></section>
+</section>
+
+<!-- ===== 再生順決定画面 ===== -->
+<section id="playOrderView" style="display:none;">
+  <button id="backBtn">← ホームに戻る</button>
+  <h2>再生順を決める</h2>
+  <p>上から順に再生されます（ドラッグで並び替え）</p>
+
+  <ul id="playOrderList"></ul>
+
+  <button id="playBtn">▶ 再生開始</button>
+</section>
+
+<!-- ===== 下部固定パネル ===== -->
+<div id="controlPanel">
+  <div>合計時間：<span id="totalTime">0</span> 分</div>
+
+  <div>
+    目標時間：
+    <input type="number" id="targetTimeInput" value="20" min="1"> 分
+  </div>
+
+  <div>差分：<span id="diffTime">±0</span></div>
+
+  <button id="autoSelectBtn">自動選択</button>
+  <button id="confirmBtn">決定</button>
+  <button id="resetPlayedBtn">視聴履歴をリセット</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -39,26 +39,25 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 -3px 12px rgba(255,255,255,0.2);
+  border-radius: 0;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* ===== 入力 + 追加ボタン ===== */
 #channelInput {
   border: 2px solid #fff;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 6px 10px;
   font-size: 14px;
   width: 100%;
   max-width: 220px;
   background: #222;
   color: #fff;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s;
 }
 
 #channelInput:focus {
   border-color: #fff;
-  box-shadow: 0 0 5px rgba(255,255,255,0.5);
   outline: none;
 }
 
@@ -67,23 +66,20 @@ button {
   background: #fff;
   color: #000;
   border: none;
-  border-radius: 24px;
+  border-radius: 4px;
   padding: 8px 18px;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+  transition: background 0.15s;
   max-width: 100%;
 }
 
 button:hover {
-  background: #ccc;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+  background: #e0e0e0;
 }
 
 button:active {
-  transform: scale(0.97);
-  box-shadow: 0 2px 6px rgba(255,255,255,0.3);
+  background: #d0d0d0;
 }
 
 /* URL入力と追加ボタンの距離 */
@@ -94,14 +90,14 @@ button:active {
 /* ===== チャンネルリスト ===== */
 #channelList > div {
   border: 2px solid #fff;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 12px;
   margin-bottom: 16px;
   width: 95%;
   max-width: 600px;
   margin: 0 auto;
   background: #111;
-  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* ヘッダー折りたたみ */
@@ -124,8 +120,8 @@ button:active {
   align-items: center;
   gap: 10px;
   padding: 6px 8px;
-  border-radius: 8px;
-  transition: background 0.2s, transform 0.1s;
+  border-radius: 2px;
+  transition: background 0.15s;
   background: #222;
 }
 
@@ -135,12 +131,11 @@ button:active {
 
 #channelList li:hover {
   background: #333;
-  transform: scale(1.02);
 }
 
 /* サムネイル */
 #channelList img {
-  border-radius: 8px;
+  border-radius: 0;
   max-width: 100%;
   height: auto;
 }
@@ -157,18 +152,17 @@ button:active {
 
 #playOrderList li {
   border: 2px solid #1c1c1c;
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 10px;
   margin-bottom: 6px;
   background: #1c1c1c;
   cursor: grab;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.15s;
   color: #fff;
 }
 
 #playOrderList li.dragging {
   opacity: 0.5;
-  transform: scale(0.98);
 }
 
 #playOrderList li:hover {
